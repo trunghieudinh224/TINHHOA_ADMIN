@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FABRICO | Contents</title>
+    <link rel="icon" type="image/png" href="../assets/logo/fabrico-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootsrap version 5.2.3 -->
+    <link rel="stylesheet" href="../library/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome version 6.7.2 -->
+    <link rel="stylesheet" href="../library/fontawesome-6.7.2/css/all.css">
+    <!-- Toastify css version 5.3.3 -->
+    <link rel="stylesheet" type="text/css" href="../library/toast/toastify.min.css">
+    <!-- Animate css version 4.1.1 -->
+    <link rel="stylesheet" type="text/css" href="../library/animate/animate.min.css">
+    </link>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/icon-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/information.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/change-password.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/modal-option-menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/multi-image-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sortable.css">
+    <link rel="stylesheet" type="text/css" href="../css/contents.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar-menu">
+        <div class="company-container">
+            <h3 class="company-name fw-b w-100 ta-c">FABRICO ADMIN</h3>
+            <div class="close-btn-sidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <br>
+        <div class="sidebar-item" id="dashboard">
+            <i class="ic fas fa-home"></i>
+            <span class="text">Dashboard</span>
+        </div>
+        <div class="sidebar-item" id="shop-information">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Shop information</span>
+        </div>
+        <div class="sidebar-item" id="category-product">
+            <i class="fa-brands fa-microsoft"></i>
+            <span class="text">Category</span>
+        </div>
+        <div class="sidebar-item active" id="contents">
+            <i class="fa-solid fa-pen"></i>
+            <span class="text">Content</span>
+        </div>
+        <div class="sidebar-item" id="history-update">
+            <i class="fa-solid fa-repeat"></i>
+            <span class="text">Update history</span>
+        </div>
+        <div class="sidebar-item" id="error-management">
+            <i class="fa-solid fa-bug"></i>
+            <span class="text">Error history</span>
+        </div>
+        <div class="sidebar-item" id="users">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="text">User</span>
+        </div>
+        <div class="sidebar-item" id="contacts">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="text">Contact</span>
+        </div>
+        <div class="sidebar-item" id="seo">
+            <i class="fa-solid fa-gear"></i>
+            <span class="text">SEO setting</span>
+        </div>
+    </div>
+
+    <section class="page">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="user-profile">
+                <div class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="user-profile">
+                <span class="username user-inf-name" id="username-option">...</span>
+                <div class="avatar">
+                    <img src="../assets/icon/user.png" width="100%" id="image-option" />
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-item text" id="option_info"><i class="ic fas fa-user-circle"></i> Account</div>
+                    <div class="dropdown-item text" id="option_change_pass"><i class="ic fas fa-key"></i> Change
+                        password
+                    </div>
+                    <div class="dropdown-item text" id="option_logout" message-access="Đăng xuất"><i
+                            class="ic fas fa-sign-out-alt"></i> Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h1 id="page-title" class="up-cs fw-b">CONTENTS</h1>
+
+            <!-- Image upload file -->
+            <input class="img-upload-file" type="file" id="production-personalisation-section-5-multi-img-upload" accept="image/*" multiple>
+            <input class="img-upload-file" type="file" id="production-personalisation-section-7-multi-img-upload" accept="image/*" multiple>
+            <input class="img-upload-file" type="file" id="img-upload" accept="image/*">
+
+            <!-- Language selection -->
+            <div class="language-select-frame">
+                <button class="cm-btn" id="saveData">SAVE</button>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- About us -->
+                    <div class="widget">
+                        <div class="title-widget-frame">
+                            <h2 class="fw-b">1. About us</h2>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="row">
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                    <div class="form-group">
+                                        <label class="text" id="about_us_image"><i class="fa-solid fa-image"></i>
+                                            Image</label>
+                                        <div class="img_frame image">
+                                            <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                id="about_us_image_val" />
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                    <div class="form-group">
+                                        <label class="text" id="about_us_title"><i class="fa-solid fa-heading"></i>
+                                            Title</label>
+                                        <textarea class="text title_val" id="about_us_title_val"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text" id="about_us_content"><i
+                                                class="fa-solid fa-quote-right"></i>
+                                            Content</label>
+                                        <textarea class="text content_val" id="about_us_content_val"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- B2b ordering -->
+                    <div class="widget">
+                        <div class="title-widget-frame">
+                            <h2 class="fw-b">2. B2b ordering</h2>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 1</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_1_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_1_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_1_title"><i
+                                                        class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val"
+                                                    id="b2b_ordering_section_1_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_1_sub_title"><i
+                                                        class="fa-solid fa-subscript"></i>
+                                                    Sub title</label>
+                                                <textarea class="text sub_title_val"
+                                                    id="b2b_ordering_section_1_sub_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_1_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val"
+                                                    id="b2b_ordering_section_1_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 2</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_2_title"><i
+                                                        class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val"
+                                                    id="b2b_ordering_section_2_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_2_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val"
+                                                    id="b2b_ordering_section_2_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 3</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_3_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_3_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_3_title"><i
+                                                        class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val"
+                                                    id="b2b_ordering_section_3_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_3_sub_title"><i
+                                                        class="fa-solid fa-subscript"></i>
+                                                    Sub title</label>
+                                                <textarea class="text sub_title_val"
+                                                    id="b2b_ordering_section_3_sub_title_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 4</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_4_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_4_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 5</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_5_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_5_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_5_title"><i
+                                                        class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val"
+                                                    id="b2b_ordering_section_5_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_5_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text sub_title_val"
+                                                    id="b2b_ordering_section_5_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 6</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_left_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Left image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_6_left_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_left_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Left button</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_left_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_left_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Left button href</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_left_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_center_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Center image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_6_center_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_center_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Center button</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_center_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_center_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Center button href</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_center_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_right_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Right image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="b2b_ordering_section_6_right_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_right_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Right button</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_right_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="b2b_ordering_section_6_right_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Right button href</label>
+                                                <input class="text" type="text"
+                                                    id="b2b_ordering_section_6_right_button_href_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Product personalisation -->
+                    <div class="widget">
+                        <div class="title-widget-frame">
+                            <h2 class="fw-b">3. Product personalisation</h2>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 1</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_1_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_1_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_1_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_1_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_1_sub_title"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub title</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_1_sub_title_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 2</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_2_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_2_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_2_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_2_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 3</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_3_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_3_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_3_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_sub_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_3_sub_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_3_href_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_3_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_3_button_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 4</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_4_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_4_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_4_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_4_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_4_sub_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_4_sub_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_4_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_4_href_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_4_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_4_button_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 5</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id="product_personalisation_section_5_slideshow_list"><i
+                                                            class="fa-solid fa-list"></i>List of slideshows</label>
+
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="product_personalisation_section_5_btn_reset">
+                                                            <i class="fas fa-undo"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-container" id="product_personalisation_section_5_grid">
+                                                    <div class="text status-grid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-9 col-xxl-10">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id=""><i class="fa-solid fa-image"></i>Slide</label>
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="product_personalisation_section_5_btn_add">Add</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="image-row" id="product_personalisation_section_5_slide"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 6</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_6_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_6_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_6_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_sub_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_6_sub_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_6_href_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_6_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_6_button_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 7</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-5 col-lg-4 col-xl-3 col-xxl-2">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id="product_personalisation_section_7_slideshow_list"><i
+                                                            class="fa-solid fa-list"></i>List of slideshows</label>
+
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="product_personalisation_section_7_btn_reset">
+                                                            <i class="fas fa-undo"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-container" id="product_personalisation_section_7_grid">
+                                                    <div class="text status-grid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-7 col-lg-8 col-xl-9 col-xxl-10">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id=""><i class="fa-solid fa-image"></i>Slide</label>
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="product_personalisation_section_7_btn_add">Add</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="image-row" id="product_personalisation_section_7_slide"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 8</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_8_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_8_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_8_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_sub_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_8_sub_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_8_href_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_8_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_8_button_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 9</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_9_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_9_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_9_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_sub_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Sub content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_9_sub_content_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_9_href_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_9_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_9_button_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 10</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_10_image"><i class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val" src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_10_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_10_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_10_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_10_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_10_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 11</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_11_title"><i class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val" id="product_personalisation_section_11_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_11_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val" id="product_personalisation_section_11_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id="product_personalisation_section_11_question_list"><i
+                                                            class="fa-solid fa-list"></i>List of questions</label>
+
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="btn_reset_product_personalisation_question">
+                                                            <i class="fas fa-undo"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-container" id="productPersonalisationQuestionGrid">
+                                                    <div class="text status-grid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_11_question"><i
+                                                        class="fa-solid fa-question"></i>
+                                                    Question</label>
+                                                <textarea class="text title_val"
+                                                    id="product_personalisation_section_11_question_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_11_answer"><i
+                                                        class="fa-solid fa-comment"></i>
+                                                    Answer</label>
+                                                <textarea class="text content_val"
+                                                    id="product_personalisation_section_11_answer_val"></textarea>
+                                            </div>
+
+                                            <div class="btn-box">
+                                                <button class="cm-btn cancel-btn" id="product_personalisation_section_11_btn_cancel_cc">Clear</button>
+                                                <button class="cm-btn" id="product_personalisation_section_11_btn_save_cc">Create</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 12</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_left_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Left image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_12_left_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_left_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Left button</label>
+                                                <input class="text" type="text" id="product_personalisation_section_12_left_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_left_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Left button href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_12_left_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_center_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Center image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_12_center_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_center_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Center button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_12_center_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_center_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Center button href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_12_center_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_right_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Right image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="product_personalisation_section_12_right_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_right_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Right button</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_12_right_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="product_personalisation_section_12_right_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Right button href</label>
+                                                <input class="text" type="text"
+                                                    id="product_personalisation_section_12_right_button_href_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Shipping -->
+                    <div class="widget">
+                        <div class="title-widget-frame">
+                            <h2 class="fw-b">4. Shipping</h2>
+                        </div>
+
+                        <div class="form-container">
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 1</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_1_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="shipping_section_1_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 2</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id="shipping_question_list"><i
+                                                            class="fa-solid fa-list"></i>List of questions</label>
+
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="btn_reset_shipping_question">
+                                                            <i class="fas fa-undo"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-container" id="shippingQuestionGrid">
+                                                    <div class="text status-grid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_2_question"><i
+                                                        class="fa-solid fa-question"></i>
+                                                    Question</label>
+                                                <textarea class="text title_val"
+                                                    id="shipping_section_2_question_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_2_answer"><i
+                                                        class="fa-solid fa-comment"></i>
+                                                    Answer</label>
+                                                <textarea class="text content_val"
+                                                    id="shipping_section_2_answer_val"></textarea>
+                                            </div>
+
+                                            <div class="btn-box">
+                                                <button class="cm-btn cancel-btn" id="shipping_section_2_btn_cancel_cc">Clear</button>
+                                                <button class="cm-btn" id="shipping_section_2_btn_save_cc">Create</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 3</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-5 col-xl-6 col-xxl-5">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_3_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="shipping_section_3_image_val" />
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-6 col-md-6 col-lg-7 col-xl-6 col-xxl-7">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_3_title"><i
+                                                        class="fa-solid fa-heading"></i>
+                                                    Title</label>
+                                                <textarea class="text title_val"
+                                                    id="shipping_section_3_title_val"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_3_content"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Content</label>
+                                                <textarea class="text content_val"
+                                                    id="shipping_section_3_content_val"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">Section 4</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_left_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Left image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="shipping_section_4_left_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_left_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Left button</label>
+                                                <input class="text" type="text" id="shipping_section_4_left_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_left_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Left button href</label>
+                                                <input class="text" type="text"
+                                                    id="shipping_section_4_left_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_center_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Center image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="shipping_section_4_center_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_center_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Center button</label>
+                                                <input class="text" type="text"
+                                                    id="shipping_section_4_center_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_center_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Center button href</label>
+                                                <input class="text" type="text"
+                                                    id="shipping_section_4_center_button_href_val">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_right_image"><i
+                                                        class="fa-solid fa-image"></i>
+                                                    Right image</label>
+                                                <div class="img_frame image">
+                                                    <img class="change-img image_val"
+                                                        src="../assets/icon/image_default.png"
+                                                        id="shipping_section_4_right_image_val" />
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_right_button"><i
+                                                        class="fa-solid fa-quote-right"></i>
+                                                    Right button</label>
+                                                <input class="text" type="text"
+                                                    id="shipping_section_4_right_button_val">
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="text" id="shipping_section_4_right_button_href"><i
+                                                        class="fa-solid fa-hashtag"></i>
+                                                    Right button href</label>
+                                                <input class="text" type="text"
+                                                    id="shipping_section_4_right_button_href_val">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pageOverlay"></div>
+    </section>
+
+    <div class="dialog-overlay" id="dialogOverlay">
+        <!-- Multi image Dialog -->
+        <div class="dialog" id="multiImageDialog">
+            <button class="close-btn" id="closeDialog">×</button>
+            <img id="selectedImage" src="" alt="Image">
+            <div class="text ta-c image-name" id="imageName"></div>
+            <button class="nav-btn left" id="prevImage">←</button>
+            <button class="nav-btn right" id="nextImage">→</button>
+        </div>
+
+        <!-- Info Dialog -->
+        <div class="dialog" id="infoDialog">
+            <button class="close-btn" id="closeInfoDialog">×</button>
+            <div class="container-custom-modal">
+                <h3>Account</h3>
+                <div class="image-container">
+                    <img id="imgInfo" loading="lazy" src="" width="100%" alt="">
+                    <input type="file" class="d-none" id="fileImageOption">
+                </div>
+                <div class="form-container">
+                    <input class="form-control" type="text" placeholder="Tên" id="nameInfo">
+                    <select class="form-select" id="roleInfo">
+                        <option value="1">Admin</option>
+                        <option value="2">Staff</option>
+                    </select>
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Change Password Dialog -->
+        <div class="dialog" id="changeDialog">
+            <button class="close-btn" id="closeChangeDialog">x</button>
+            <div class="container-custom-modal">
+                <h3>Change password</h3>
+                <div class="form-container">
+                    <input class="form-control" type="password" placeholder="Recent password" id="old_pass">
+                    <input class="form-control" type="password" placeholder="New password" id="new_pass">
+                    <input class="form-control" type="password" placeholder="Re-enter new password" id="new_pass_re">
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert dialog -->
+    <div id="alert-dialog">
+        <div id="overlay-alert-dialog">
+            <div id="frame-alert-dialog">
+                <i class="fas fa-times al-btn" id="close-alert-dialog"></i>
+                <div id="icon-alert-dialog-area">
+                    <img src="../assets/icon/error-mess-md.png" id="icon-alert-dialog" />
+                </div>
+
+                <div id="alert-content">
+                    <div class="title-alert-dialog ta-c fw-b w100 up-cs" id="alert-title">INFORMATION</div>
+                    <div id="alert-mess" class="text ta-c w-100">Loading data...</div>
+
+                    <div id="alert-button-area">
+                        <button class="cm-btn al-btn negative-btn" id="neg-btn">No</button>
+                        <button class="cm-btn al-btn positive-btn" id="pos-btn">Yes</button>
+                        <button class="cm-btn al-btn negative-btn" id="con-btn">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootsrap version 5.2.3 -->
+    <script type="text/javascript" src="../library/bootstrap/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery version 3.7.1 -->
+    <script type="text/javascript" src="../library/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+
+    <!-- FontAwesome version 6.7.2 -->
+    <script type="text/javascript" src="../library/fontawesome-6.7.2/js/fontawesome.min.js"></script>
+
+    <!-- Sortable version 1.15.2 -->
+    <script type="text/javascript" src="../library/sortable/sortable.js"></script>
+
+    <!-- Toastify version 5.37.0 -->
+    <script type="text/javascript" src="../library/toast/toastify-js.js"></script>
+
+    <!-- Select2 version 4.0.3 -->
+    <script type="text/javascript" src="../library/select2/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+    <!-- Axios version 1.8.4 -->
+    <script type="text/javascript" src="../library/axios/axios.min.js"></script>
+
+    <!-- Site Bar -->
+    <script type="text/javascript" src="../js/common/site-bar.js"></script>
+
+    <!-- Option JS -->
+    <script type="module" src="../js/common/option.js"></script>
+
+    <script type="module" src="../js/contents.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+/*
+    ******  MULTI IMAGE DIALOG  ******
+*/
+#multiImageDialog {
+    display: none;
+    object-fit: contain;
+}
+
+#multiImageDialog img {
+    width: 600px;
+    height: 400px;
+    object-fit: contain;
+}
+
+#multiImageDialog .image-name {
+    margin: 10px 0;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.2);
+    color: white;
+    border: none;
+    font-size: var(--fs-text);
+    padding: 10px;
+    cursor: pointer;
+}
+
+.nav-btn:hover {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn.left {
+    left: 20px;
+}
+
+.nav-btn.right {
+    right: 20px;
+}
+
+
+
+
+
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1600px) {}
+
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 660px) {
+    .dialog {
+        max-width: 80%;
+        max-height: 80%;
+    }
+
+    #multiImageDialog img {
+        width: 400px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    #multiImageDialog img {
+        width: 350px;
+        height: 200px;
+    }}
+
+@media screen and (max-width: 450px) {}

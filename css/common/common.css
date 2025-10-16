@@ -1,0 +1,743 @@
+/*
+    _ created by: Dinh Trung Hieu
+    _ created date: 2025/04/15
+*/
+
+/* Google Fonts Import Link */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root {
+    --color-primary: #000;
+    --color-secondary: rgb(244, 244, 244);
+    --color-third: #ffffff;
+    --color-main: #3498db;
+    --color-border: #ababab;
+    --color-success: #28a745;
+    --color-error: #f57d7d;
+    --color-disabled: #cecece;
+    --color-button: #4580c2;
+    --color-button-hover: #0d58a4;
+    --color-event-row: #f8f9fa;
+    --color-selected: #c4e2f6;
+    --color-ic-button: #878383;
+
+    /* Font */
+    --font-main: 'Noto Sans JP', sans-serif;
+
+    /* Font size */
+    --fs-txt: clamp(12px, 2vw + 2px, 14px);
+    --fs-user-inf: clamp(15px, 2vw + 6px, 20px);
+    --fs-err-tooltip: clamp(12px, 1.5vw + 5px, 15px);
+    --fs-tit-frm: clamp(18px, 2.5vw + 8px, 28px);
+    --fs-ic-btn: clamp(14px, 2vw + 2px, 16px);
+    --fs-db-num-stt: clamp(14px, 1.5vw + 4px, 19px);
+
+    --fs-h1: clamp(22px, 2.5vw + 8px, 30px);
+    --fs-h2: clamp(18px, 2vw + 6px, 24px);
+    --fs-h3: clamp(16px, 1.8vw + 5px, 21px);
+
+
+    /* Font weight */
+    --fw-normal: 300;
+    --fw-bold: 700;
+
+    /* Scale */
+    --scl-btn: 1.04;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: auto;
+    display: flex;
+    min-height: 100vh;
+}
+
+
+
+/*
+    ******  FONT-SIZE  ******
+*/
+.text {
+    font-family: var(--font-main);
+    font-size: var(--fs-txt) !important;
+    color: var(--color-primary);
+}
+
+h1 {
+    font-family: var(--font-main);
+    font-size: var(--fs-h1) !important;
+    color: var(--color-primary);
+}
+
+h2 {
+    font-family: var(--font-main);
+    font-size: var(--fs-h2) !important;
+    color: var(--color-primary);
+}
+
+h3 {
+    font-family: var(--font-main);
+    font-size: var(--fs-h3) !important;
+    color: var(--color-primary);
+}
+
+.user-inf-name {
+    font-family: var(--font-main);
+    font-size: var(--fs-user-inf);
+    color: var(--color-primary);
+}
+
+.tit-frm {
+    font-family: var(--font-main);
+    font-size: var(--fs-tit-frm) !important;
+    color: var(--color-primary);
+}
+
+.db-number-status {
+    font-family: var(--font-main);
+    font-size: var(--fs-tit-frm) !important;
+}
+
+
+
+/*
+    ******  FONT-WEIGHT  ******
+*/
+.fw-b {
+    font-weight: var(--fw-bold);
+}
+
+
+/*
+    ******  BUTTON  ******
+*/
+.cm-btn {
+    width: fit-content;
+    border: none;
+    padding: 8px 14px;
+    background-color: var(--color-main);
+    color: var(--color-third);
+    font-size: var(--fs-txt);
+    line-height: 1.2;
+    border-radius: 0.4rem;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.cm-btn:hover {
+    scale: var(--scl-btn);
+}
+
+.cm-btn-disabled {
+    background-color: var(--color-disabled) !important;
+    color: var(--color-third) !important;
+    scale: unset !important;
+}
+
+button i::before,
+.ic-btn {
+    font-size: var(--fs-ic-btn);
+}
+
+button:disabled {
+    color: var(--color-disabled);
+    cursor: not-allowed;
+}
+
+.ic-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    color: var(--color-button);
+}
+
+.ic-btn:hover {
+    transform: scale(1.05);
+}
+
+.ic-btn:disabled {
+    transform: scale(1);
+}
+
+.ic-btn:disabled i::before {
+    color: var(--color-disabled);
+}
+
+.cancel-btn {
+    background-color: var(--color-disabled);
+}
+
+.negative-btn {
+    background-color: var(--color-error);
+}
+
+.positive-btn {
+    background-color: var(--color-main);
+}
+
+.btn-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/*
+    ******  FONT-WEIGHT  ******
+*/
+.ic {
+    font-size: var(--fs-ic-btn);
+}
+
+.ic::before {
+    font-size: var(--fs-ic-btn);
+}
+
+
+/*
+    ******  ALIGN  ******
+*/
+.ta-l {
+    text-align: left;
+}
+
+.ta-c {
+    text-align: center;
+}
+
+.ta-r {
+    text-align: right;
+}
+
+
+/*
+    ******  TEXT STYLE  ******
+*/
+.up-cs {
+    text-transform: uppercase;
+}
+
+.lo-cs {
+    text-transform: lowercase;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 1;
+}
+
+
+
+/*
+    ******  DISPLAY  ******
+*/
+.dp-bl {
+    display: block;
+}
+
+.dp-no {
+    display: none;
+}
+
+
+
+/*
+    ******  WIDTH  ******
+*/
+.w-100 {
+    width: 100%;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-30 {
+    width: 30%;
+}
+
+.w-20 {
+    width: 20%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
+
+/*
+    ******  MARGIN && PADDING  ******
+*/
+.pd-0 {
+    padding: 0 !important;
+}
+
+
+/*
+    ******  PAGE  ******
+*/
+.page {
+    position: relative;
+    width: 100%;
+}
+
+.main-content {
+    margin-top: 70px;
+    margin-left: 70px;
+    height: 100%;
+    padding: 20px;
+    flex-grow: 1;
+    transition: margin-left 0.3s;
+    z-index: 1;
+    overflow: auto;
+    background-color: #f7fbff;
+}
+
+.main-content.expanded {
+    margin-left: 240px;
+}
+
+.pageOverlay {
+    display: none;
+    background: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*
+    ******  TITLE  ******
+*/
+.tit-inp {
+    margin-bottom: 20px;
+}
+
+#page-title {
+    margin-bottom: 30px;
+    font-weight: bold;
+}
+
+.title-widget {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+/*
+    ******  INPUT && TEXT AREA  ******
+*/
+/* CSS cho nhóm form (form-group) */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+/* CSS cho label trong form */
+.form-group label {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-primary);
+    transition: color 0.2s ease;
+}
+
+/* CSS cho input và textarea trong form */
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 5px 7px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+/* CSS cho textarea */
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* CSS cho trạng thái focus của input và textarea */
+.form-group input:focus,
+.form-group select,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-main);
+    box-shadow: 0 0 0 1px rgba(74, 144, 226, 0.2);
+}
+
+
+
+/*
+    ******  NOTE  ******
+*/
+.required-item {
+    color: var(--color-error);
+}
+
+
+
+/*
+    ******  WIDGET  ******
+*/
+.widget {
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 340px;
+    height: auto;
+    max-height: 1000px;
+    overflow: auto;
+}
+
+.title-widget-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.title-widget-frame h2 {
+    margin: 0;
+}
+
+.title-widget-frame .col-right {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+
+
+
+/*
+    ******  DIALOG && OVERLAY  ******
+*/
+.dialog-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.dialog {
+    position: relative;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 80%;
+    max-height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #ccc;
+    animation: zoomIn 0.8s ease forwards;
+}
+
+.dialog .close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+
+
+/*
+    ******  GRID  ******
+*/
+.status-grid {
+    margin: auto;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-border);
+}
+
+
+
+
+/*
+    ******  LANGUAGE SELECTION  ******
+*/
+.language-select-frame {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.custom-select {
+    position: relative;
+    min-width: 150px;
+    width: 10%;
+    user-select: none;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: var(--color-third);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.select-box img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: var(--color-third);
+    border: 1px solid var(--color-border);
+    border-radius: 5px;
+    margin-top: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.options.show {
+    display: block;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: var(--color-event-row);
+}
+
+.option img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+
+.language-select-frame button {
+    padding: 11px 14px;
+}
+
+
+
+
+
+
+
+/*
+  ******  DATEPICKER  ******
+*/
+.ui-datepicker .ui-widget-header {
+    background-color: var(--color-main);
+}
+
+
+
+
+
+/*
+  ******  LABEL  ******
+*/
+label i {
+    margin-right: 4px;
+    color: var(--color-main);
+}
+
+
+/*
+  ******  IMAGE UPLOAD INPUT  ******
+*/
+.img-upload-file {
+    display: none;
+}
+
+.clear-upload-btn {
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.clear-upload-btn i {
+    color: var(--color-error) !important;
+}
+
+.clear-upload-btn:hover {
+    cursor: pointer;
+}
+
+
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1600px) {
+    .main-content.expanded {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .main-content.expanded {
+        margin-left: 220px;
+    }
+
+    .custom-select {
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .custom-select {
+        width: 24%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body:has(.sidebar.expanded) .main-content {
+        margin-left: 0px;
+    }
+
+    .custom-select {
+        width: 26%;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .main-content {
+        margin-left: 50px;
+    }
+
+    .widget {
+        min-height: 275px;
+    }
+
+    .dialog .close-btn {
+        top: -12px;
+        right: -12px;
+        width: 24px;
+        height: 24px;
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .custom-select {
+        width: 35%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .main-content {
+        padding: 18px;
+    }
+
+    .main-content.expanded {
+        margin-left: 140px;
+    }
+
+    .widget {
+        padding: 14px;
+    }
+
+    .custom-select {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-content {
+        padding: 12px;
+    }
+
+    .custom-select {
+        width: 43%;
+    }
+}

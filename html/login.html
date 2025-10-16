@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FABRICO | Login</title>
+    <link rel="icon" type="image/png" href="../assets/logo/fabrico-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootsrap version 5.2.3 -->
+    <link rel="stylesheet" href="../library/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome version 6.7.2 -->
+    <link rel="stylesheet" href="../library/fontawesome-6.7.2/css/all.css">
+    <!-- Material Design Iconic Font version 2.2.2 -->
+    <link rel="stylesheet" href="../library/material-design-iconic-font/css/material-design-iconic-font.css">
+    <!-- Spectrum (color-picker) version 1.8.1 -->
+    <script rel="stylesheet" href="../library/spectrum/spectrum.min.css"></script>
+    <!-- Toastify version 5.14.1 -->
+    <script rel="stylesheet" href="../library/toast/toastify.min.css"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
+</head>
+
+<body>
+
+    <div class="login-content">
+        <div class="container-login">
+            <div class="wrap-login">
+                <div class="login-form validate-form">
+                    <span class="login-form-logo">
+                        <img src="../assets/logo/fabrico-logo.png" />
+                    </span>
+                    <span class="login-form-title">
+                        FABRICO
+                    </span>
+
+                    <div class="wrap-input-ele validate-input" data-validate="Enter username">
+                        <input class="input-ele" id="username-val" type="text" name="username" placeholder="Username"
+                            autocomplete="off" value="">
+                        <span class="focus-input-ele" data-placeholder="&#xf207;"></span>
+                    </div>
+
+                    <div class="wrap-input-ele validate-input" data-validate="Enter password">
+                        <input class="input-ele" id="password-val" type="password" name="pass" placeholder="Password"
+                            value="">
+                        <span class="focus-input-ele" data-placeholder="&#xf191;"></span>
+                    </div>
+
+                    <div class="option-form-mess" id="err-mess-area">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        <span class="text" id="err-mess">...</span>
+                    </div>
+
+                    <div class="option-form-checkbox">
+                        <input class="input-option" id="remember-ckb" type="checkbox" name="remember-me">
+                        <label class="label-option text" for="remember-ckb">Stay logged in</label>
+                    </div>
+
+                    <div class="container-login-form-btn">
+                        <button class="login-form-btn cm-btn cm-btn-disabled" id="login-btn" disabled>Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alert dialog -->
+        <div id="alert-dialog">
+            <div id="overlay-alert-dialog">
+                <div id="frame-alert-dialog">
+                    <i class="fas fa-times" id="close-alert-dialog"></i>
+                    <div id="icon-alert-dialog-area">
+                        <img src="../assets/icon/error-mess-md.png" id="icon-alert-dialog" />
+                    </div>
+
+                    <div id="alert-content">
+                        <div class="title-alert-dialog ta-c fw-b w100 up-cs" id="alert-title">INFORMATION</div>
+                        <div id="alert-mess" class="text ta-c w-100">Loading data...</div>
+
+                        <div id="alert-button-area">
+                            <button class="cm-btn al-btn negative-btn" id="neg-btn">No</button>
+                            <button class="cm-btn al-btn positive-btn" id="pos-btn">Yes</button>
+                            <button class="cm-btn al-btn negative-btn" id="con-btn">Confirm</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootsrap version 5.2.3 -->
+    <script type="text/javascript" src="../library/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- FontAwesome version 6.7.2 -->
+    <script type="text/javascript" href="../library/fontawesome-6.7.2/js/fontawesome.min.js"></script>
+    <!-- Spectrum (color-picker) version 1.8.1 -->
+    <script type="text/javascript" href="../library/spectrum/spectrum.min.js"></script>
+    <!-- Toastify version 5.14.1 -->
+    <script type="text/javascript" href="../library/toast/toastify-js.js"></script>
+    <!-- jQuery version 2.2.4 -->
+    <script type="text/javascript" src="../library/jquery-2.2.4/jquery.js"></script>
+    <!-- Axios version 1.8.4 -->
+    <script type="text/javascript" src="../library/axios/axios.min.js"></script>
+
+    <script type="module" src="../js/login.js"></script>
+
+</body>
+
+</html>

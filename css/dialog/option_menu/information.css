@@ -1,0 +1,30 @@
+/* dialog styles */
+#infoDialog {
+    display: none;
+    width: fit-content;
+    width: 260px;
+    height: 495px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile */
+@media (max-width: 767.9px) {}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024.9px) {
+    #infoDialog {
+        width: 300px;
+        height: 500px;
+    }
+}
+
+/* PC */
+@media (min-width: 1025px) {
+    #infoDialog {
+        width: 300px;
+        height: 500px;
+    }
+}

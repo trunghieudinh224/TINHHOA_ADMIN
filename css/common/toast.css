@@ -1,0 +1,84 @@
+/*
+    _ created by: Dinh Trung Hieu
+    _ created date: 2025/04/15
+*/
+
+.toastify {
+    max-width: calc(70% - 20px);
+    padding: 12px 15px;
+    border-radius: 8px !important;
+    background-image: linear-gradient(to left, #83abcd 0%, #518aca 100%, #76a8e1 100%) !important;
+}
+
+.toast-close {
+    margin-left: auto; 
+    margin-right: 0;
+}
+
+.toastify-avatar {
+    margin: auto;
+    margin-right: 5px;
+    width: 1.2em;
+    height: 1.2em;
+}
+
+.toast-w {
+    min-width: 18%;
+    font-size: var(--fs-txt) !important;
+}
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1200px) {
+    .toast-w {
+        min-width: 26%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .toast-w {
+        min-width: 35%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .toastify {
+        padding: 9px 12px;
+    }
+
+    .toastify-avatar {
+        width: 1em;
+        height: 1em;
+    }
+
+    .toast-w {
+        min-width: 40%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .toastify-avatar {
+        width: 1em;
+        height: 1em;
+    }
+
+    .toast-w {
+        min-width: 50%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .toastify {
+        padding: 7px 12px;
+    }
+
+    .toastify-avatar {
+        width: 0.8em;
+        height: 0.8em;
+    }
+
+    .toast-w {
+        min-width: 60%;
+    }
+}

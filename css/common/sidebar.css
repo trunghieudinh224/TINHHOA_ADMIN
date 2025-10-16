@@ -1,0 +1,148 @@
+/*
+    _ created by: Dinh Trung Hieu
+    _ created date: 2025/04/15
+*/
+
+
+/* Sidebar styles */
+.sidebar {
+    width: 70px;
+    background: #2c3e50;
+    color: white;
+    padding: 20px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: width 0.3s;
+    z-index: 3;
+}
+
+.sidebar.expanded {
+    width: 240px;
+}
+
+.company-container {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    padding: 20px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.company-name {
+    color: var(--color-third);
+    display: none;
+    white-space: nowrap;
+}
+
+.sidebar.expanded .company-name {
+    display: inline;
+}
+
+.sidebar-item {
+    min-height: 54px;
+    padding: 15px 24px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.sidebar-item i {
+    margin-right: 10px;
+    text-align: center;
+}
+
+.sidebar-item span {
+    display: none;
+    white-space: nowrap;
+    color: var(--color-third);
+}
+
+.sidebar.expanded .sidebar-item span {
+    display: inline;
+}
+
+.sidebar-item:hover {
+    background: var(--color-main);
+}
+
+.sidebar-item.active {
+    background: var(--color-main);
+}
+
+.close-btn-sidebar {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1600px) {
+    .sidebar.expanded .close-btn-sidebar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .sidebar.expanded .close-btn-sidebar {
+        display: none;
+    }
+
+    .sidebar.expanded {
+        width: 220px;
+    }
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {
+    .sidebar.expanded .close-btn-sidebar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .sidebar {
+        z-index: 3;
+        width: 50px;
+    }
+
+    .sidebar.expanded {
+        width: 220px;
+        z-index: 3;
+    }
+
+    .sidebar-item {
+        min-height: 54px;
+        padding: 15px 18px;
+    }
+
+    .company-container {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .sidebar {
+        z-index: 3;
+    }
+
+    .sidebar.expanded {
+        width: 100%;
+        z-index: 3;
+    }
+
+    .sidebar.expanded .close-btn-sidebar {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 450px) {}

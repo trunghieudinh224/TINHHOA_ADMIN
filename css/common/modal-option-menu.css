@@ -1,0 +1,167 @@
+.modal-custom {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    top: 35px;
+    transform: translateX(calc(-50% + 25px));
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content/Box */
+.modal-content-custom {
+    display: none;
+    border-radius: 10px;
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    width: 80%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+}
+
+/* The Close Button */
+.close {
+    display: block;
+    color: #aaa;
+    text-align: right;
+    font-size: 28px;
+    font-weight: bold;
+    width: 10px;
+    margin-left: auto;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.container-custom-modal h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.container-custom-modal .container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container-custom-modal .image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.container-custom-modal .image-container img {
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 10px;
+    height: auto;
+}
+
+.container-custom-modal .form-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-custom-modal .form-container input,
+.container-custom-modal .form-container select {
+    padding: 8px;
+    margin: 5px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.container-custom-modal .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.container-custom-modal .button-group button {
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* CSS */
+.button-6 {
+    align-items: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: .25rem;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+    box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: system-ui, -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 1.25;
+    margin: 0;
+    padding: calc(.875rem - 1px) calc(1.5rem - 1px);
+    position: relative;
+    text-decoration: none;
+    transition: all 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    width: auto;
+}
+
+.button-6:hover,
+.button-6:focus {
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.button-6:hover {
+    transform: translateY(-1px);
+}
+
+.button-6:active {
+    background-color: #F0F0F1;
+    border-color: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.06) 0 2px 4px;
+    color: rgba(0, 0, 0, 0.65);
+    transform: translateY(0);
+}
+
+/* Add Animation */
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.9px) {}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1024.9px) {}
+
+/* PC */
+@media (min-width: 1025px) {}

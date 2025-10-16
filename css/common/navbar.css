@@ -1,0 +1,154 @@
+/*
+    _ created by: Dinh Trung Hieu
+    _ created date: 2025/04/15
+*/
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    position: fixed;
+    top: 0;
+    left: 70px;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: left 0.3s;
+    z-index: 2;
+}
+
+.navbar.expanded {
+    left: 240px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.toggle-btn {
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.username {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 4px;
+    display: none;
+    min-width: 230px !important;
+    z-index: 1000;
+    color: #333;
+}
+
+.avatar:hover+.dropdown,
+.dropdown:hover {
+    display: block;
+}
+
+.dropdown-item {
+    min-height: 50px;
+    padding: 10px 12px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-item i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.dropdown-item i::before {
+    color: var(--color-main);
+}
+
+.dropdown-item:hover {
+    background: #ebebeb;
+}
+
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1600px) {
+    .navbar.expanded {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .navbar.expanded {
+        left: 220px;
+    }
+}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {
+    .dropdown {
+        min-width: 200px !important;
+    }
+
+    .dropdown-item {
+        min-height: 40px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .navbar {
+        z-index: 2;
+        padding: 18px;
+        left: 50px;
+    }
+
+    .navbar.expanded {
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 580px) {
+
+    .avatar {
+        width: 32px;
+        height: 32px;
+    }
+
+    .dropdown {
+        min-width: 170px !important;
+    }
+
+    .dropdown-item {
+        min-height: 40px;
+        padding: 8px 10px;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+}
+
+@media screen and (max-width: 365px) {
+
+}

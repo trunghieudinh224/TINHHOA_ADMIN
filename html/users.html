@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MCV | Users</title>
+    <link rel="icon" type="image/png" href="../assets/logo/fabrico-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootsrap version 5.2.3 -->
+    <link rel="stylesheet" href="../library/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome version 6.7.2 -->
+    <link rel="stylesheet" href="../library/fontawesome-6.7.2/css/all.css">
+    <!-- Toastify css version 5.3.3 -->
+    <link rel="stylesheet" type="text/css" href="../library/toast/toastify.min.css">
+    </link>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/icon-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/information.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/change-password.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/modal-option-menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/multi-image-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sortable.css">
+    <link rel="stylesheet" type="text/css" href="../css/users.css">
+</head>
+
+<body>
+    <div class="sidebar" id="sidebar-menu">
+        <div class="company-container">
+            <h3 class="company-name fw-b w-100 ta-c">FABRICO ADMIN</h3>
+            <div class="close-btn-sidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <br>
+        <div class="sidebar-item" id="dashboard">
+            <i class="ic fas fa-home"></i>
+            <span class="text">Dashboard</span>
+        </div>
+        <div class="sidebar-item" id="shop-information">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Shop information</span>
+        </div>
+        <div class="sidebar-item" id="category-product">
+            <i class="fa-brands fa-microsoft"></i>
+            <span class="text">Category</span>
+        </div>
+        <div class="sidebar-item" id="news">
+            <i class="fa-solid fa-newspaper"></i>
+            <span class="text">Service</span>
+        </div>
+        <div class="sidebar-item" id="contents">
+            <i class="fa-solid fa-pen"></i>
+            <span class="text">Content</span>
+        </div>
+        <div class="sidebar-item" id="history-update">
+            <i class="fa-solid fa-repeat"></i>
+            <span class="text">Update history</span>
+        </div>
+        <div class="sidebar-item" id="error-management">
+            <i class="fa-solid fa-bug"></i>
+            <span class="text">Error history</span>
+        </div>
+        <div class="sidebar-item active" id="user">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="text">User</span>
+        </div>
+        <div class="sidebar-item" id="contacts">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="text">Contact</span>
+        </div>
+        <div class="sidebar-item" id="seo">
+            <i class="fa-solid fa-gear"></i>
+            <span class="text">SEO setting</span>
+        </div>
+    </div>
+
+    <section class="page">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="user-profile">
+                <div class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="user-profile">
+                <span class="username user-inf-name" id="username-option">...</span>
+                <div class="avatar">
+                    <img src="../assets/icon/user.png" width="100%" id="image-option" />
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-item text" id="option_info"><i class="ic fas fa-user-circle"></i> Account</div>
+                    <div class="dropdown-item text" id="option_change_pass"><i class="ic fas fa-key"></i> Change
+                        password
+                    </div>
+                    <div class="dropdown-item text" id="option_logout" message-access="Đăng xuất"><i
+                            class="ic fas fa-sign-out-alt"></i> Logout
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <h1 id="page-title" class="up-cs fw-b">USERS</h1>
+
+            <!-- Image upload file -->
+            <input class="img-upload-file" type="file" id="multi-img-upload" accept="image/*" multiple>
+            <input class="img-upload-file" type="file" id="img-upload" accept="image/*">
+
+            <div class="row">
+                <!-- User list -->
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7">
+                    <div class="widget" id="user_widget">
+                        <div class="form-container">
+                            <div class="toolbar">
+                                <div class="left-buttons">
+                                    <button id="saveBtn"><i class="fas fa-save"></i></button>
+                                    <button id="resetBtn"><i class="fas fa-undo"></i></button>
+                                </div>
+                                <div class="pagination">
+                                    <span class="record-info" id="recordInfo"></span>
+                                </div>
+                            </div>
+
+                            <div class="user-title">
+                                <div class="cg-tit-no text ta-c fw-b">No</div>
+                                <div class="cg-tit-name text ta-c fw-b">Name</div>
+                                <div class="cg-tit-avatar text ta-c fw-b">Avatar</div>
+                                <div class="cg-tit-role text ta-c fw-b">Role</div>
+                                <div class="cg-tit-note text ta-c fw-b">Note</div>
+                                <div class="cg-tit-btn"></div>
+                            </div>
+
+                            <div class="grid-container" id="userList">
+                                <div class="text status-grid">No data available</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-5 col-xxl-5">
+                    <div class="widget" id="user_widget">
+                        <div class="title-widget-frame">
+                            <h2 class="fw-b" id="user_title">User registration</h2>
+
+                            <div class="col-right">
+                                <a class="text underline" id="btn_reset_user"><i class="fas fa-undo"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5">
+                                <div class="form-group">
+                                    <label class="text">
+                                        <i class="fa-solid fa-image"></i>
+                                        Avatar
+                                    </label>
+                                    <div class="img_frame user_img_frame">
+                                        <img class="change-img" src="../assets/icon/image_default.png" id="user_img" />
+
+                                        <button class="clear-upload-btn" id="btn_clear_img"><i
+                                                class="ic-btn fa-solid fa-circle-xmark"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-7">
+                                <div class="form-group">
+                                    <label class="text"><i class="fas fa-user"></i>
+                                        Username</label>
+                                    <input class="text" type="text" id="username_val">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text"><i class="fas fa-signature"></i>
+                                        Name</label>
+                                    <input class="text" type="text" id="user_name_val">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text"><i class="fa-solid fa-quote-right"></i>
+                                        Note</label>
+                                    <textarea class="text" id="user_note_val"></textarea>
+                                </div>
+                                <div class="btn-box">
+                                    <button class="cm-btn cancel-btn" id="btn_cancel">Clear</button>
+                                    <button class="cm-btn" id="btn_save">Create</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pageOverlay"></div>
+    </section>
+
+    <div class="dialog-overlay" id="dialogOverlay">
+        <!-- Info Dialog -->
+        <div class="dialog" id="infoDialog">
+            <button class="close-btn" id="closeInfoDialog">×</button>
+            <div class="container-custom-modal">
+                <h3>Account</h3>
+                <div class="image-container">
+                    <img id="imgInfo" loading="lazy" src="" width="100%" alt="">
+                    <input type="file" class="d-none" id="fileImageOption">
+                </div>
+                <div class="form-container">
+                    <input class="form-control" type="text" placeholder="Name" id="nameInfo">
+                    <input class="form-control" type="text" placeholder="Phone" id="phoneInfo">
+                    <input class="form-control" type="text" placeholder="Email" id="emailInfo">
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Change Password Dialog -->
+        <div class="dialog" id="changeDialog">
+            <button class="close-btn" id="closeChangeDialog">x</button>
+            <div class="container-custom-modal">
+                <h3>Change password</h3>
+                <div class="form-container">
+                    <input class="form-control" type="password" placeholder="Recent password" id="old_pass">
+                    <input class="form-control" type="password" placeholder="New password" id="new_pass">
+                    <input class="form-control" type="password" placeholder="Re-enter new password" id="new_pass_re">
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert dialog -->
+    <div id="alert-dialog">
+        <div id="overlay-alert-dialog">
+            <div id="frame-alert-dialog">
+                <i class="fas fa-times al-btn" id="close-alert-dialog"></i>
+                <div id="icon-alert-dialog-area">
+                    <img src="../assets/icon/error-mess-md.png" id="icon-alert-dialog" />
+                </div>
+
+                <div id="alert-content">
+                    <div class="title-alert-dialog ta-c fw-b w100 up-cs" id="alert-title">INFORMATION</div>
+                    <div id="alert-mess" class="text ta-c w-100">Loading data...</div>
+
+                    <div id="alert-button-area">
+                        <button class="cm-btn al-btn negative-btn" id="neg-btn">No</button>
+                        <button class="cm-btn al-btn positive-btn" id="pos-btn">Yes</button>
+                        <button class="cm-btn al-btn negative-btn" id="con-btn">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootsrap version 5.2.3 -->
+    <script type="text/javascript" src="../library/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- jQuery version 2.2.4 -->
+    <script type="text/javascript" src="../library/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../library/jquery-2.2.4/jquery.js"></script>
+    <!-- FontAwesome version 6.7.2 -->
+    <script type="text/javascript" src="../library/fontawesome-6.7.2/js/fontawesome.min.js"></script>
+    <!-- Sortable version 1.15.2 -->
+    <script type="text/javascript" src="../library/sortable/sortable.js"></script>
+    <!-- Toastify version 5.37.0 -->
+    <script type="text/javascript" src="../library/toast/toastify-js.js"></script>
+    <!-- Select2 version 4.0.3 -->
+    <script type="text/javascript" src="../library/select2/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Axios version 1.8.4 -->
+    <script type="text/javascript" src="../library/axios/axios.min.js"></script>
+    <!-- Site Bar -->
+    <script type="text/javascript" src="../js/common/site-bar.js"></script>
+    <!-- Option JS -->
+    <script type="module" src="../js/common/option.js"></script>
+
+    <script type="module" src="../js/users.js"></script>
+</body>
+
+</html>

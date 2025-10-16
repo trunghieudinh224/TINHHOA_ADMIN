@@ -1,0 +1,742 @@
+/*
+    ******  EXTRA BUTTON TITLE  ******
+*/
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label i::before {
+    color: var(--color-main);
+    margin-right: 4px;
+}
+
+.item-frame {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.item-frame a {
+    cursor: pointer;
+}
+
+/*
+    ******  EXPANDED ITEM  ******
+*/
+.expandable-div {
+    width: 100%;
+    background: var(--color-third);
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 9.5px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10px;
+    background: var(--color-main);
+    color: var(--color-third);
+    cursor: pointer;
+    user-select: none;
+}
+
+.header .branch {
+    margin: auto 0;
+    color: var(--color-third);
+}
+
+.arrow {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.arrow.expanded {
+    transform: rotate(180deg);
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    background: #f9fafb;
+    transition: max-height 0.3s ease, padding 0.3s ease;
+}
+
+.content.expanded {
+    max-height: 200px;
+    padding: 15px 10px;
+    transition: max-height 0.8s ease, padding 0.3s ease;
+}
+
+/*
+    ******  UPLOAD IMAGE  ******
+*/
+.img-upload-file {
+    display: none;
+}
+
+.change-img:hover {
+    cursor: pointer;
+}
+
+.img_frame {
+    border: 2px dashed var(--color-border);
+    border-radius: 4px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.img_frame img {
+    width: 100%;
+    height: 100%;
+}
+
+#shop_logo_val,
+#shop_icon_logo_val,
+#shop_text_logo_val,
+#shop_logo_with_text_val {
+    height: 180px;
+}
+
+#shop_icon_logo_val {
+    object-fit: scale-down;
+}
+
+#shop_logo_with_text_val {
+    object-fit: contain;
+}
+
+#introduce_image_val {
+    height: 260px;
+}
+
+#shop_introduction_image_val {
+    height: 260px;
+}
+
+#characteristic_image_val {
+    height: 190px;
+}
+
+.branch-widget {
+    min-height: 522px;
+}
+
+/*
+    ******  TEXTAREA  ******
+*/
+.branch_add {
+    min-height: 110px !important;
+}
+
+#introduction_content_val {
+    min-height: 120px;
+}
+
+#shop_introduction_title_val {
+    min-height: 80px;
+}
+
+#shop_introduction_content_val {
+    min-height: 150px;
+}
+
+#slideshows_title_val {
+    min-height: 40px;
+}
+
+#slideshows_content_val {
+    min-height: 75px;
+}
+
+#characteristic_content_val {
+    min-height: 130px;
+}
+
+.philosophy_content_val {
+    min-height: 90px !important;
+}
+
+/*
+    ******  BUSINESS PHILOSOPHY  ******
+*/
+.tab-container {
+    display: flex;
+    margin: 0 auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 290px;
+    height: 290px;
+}
+
+.tab-menu {
+    width: 50px;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+}
+
+.tab-item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    position: relative;
+}
+
+.tab-item i {
+    font-size: var(--fs-user-inf);
+}
+
+.tab-item:hover i {
+    transform: scale(1.1);
+}
+
+.tab-item.active {
+    background-color: var(--color-main);
+}
+
+.tab-item.active::after {
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 12px solid var(--color-main);
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    transition: border-left-color 0.3s;
+    z-index: 10;
+}
+
+.tab-content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    height: 100%;
+    overflow: auto;
+    position: relative;
+    border-left: none;
+}
+
+.content-detail {
+    display: none;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    padding: 8px 18px;
+    box-sizing: border-box;
+}
+
+.content-detail.active {
+    display: block;
+    opacity: 1;
+    max-height: unset;
+    overflow: auto;
+    /* animation: slideInLeft 0.5s ease forwards; */
+}
+
+.content-detail form {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.icon-select-btn {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    font-size: 14px;
+    min-height: 36px;
+}
+
+.icon-select-btn i {
+    margin-right: 8px;
+}
+
+.save-button {
+    align-self: flex-end;
+    padding: 8px 16px;
+    background-color: var(--color-main);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-button:hover {
+    background-color: var(--color-main);
+}
+
+/*
+    ******  CHARACTERISTIC  ******
+*/
+#imageGrid {
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 0px 12px;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.cc-item {
+    padding: 6px 4px;
+    cursor: grab;
+}
+
+.cc-item:active {
+    cursor: grabbing;
+}
+
+.cc-item div {
+    margin: auto;
+}
+
+.cc-item img {
+    height: 40px;
+    margin: auto;
+}
+
+.cc-item .col-buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.cc-item .del-img-btn {
+    color: var(--color-error);
+}
+
+#imageGrid .cc-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+#imageGrid .cc-item:last-child {
+    border-bottom: none;
+}
+
+.btn-box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
+}
+
+.highlight {
+    background-color: var(--color-selected);
+}
+
+/*
+    ******  COMPANY IMAGE SLIDE  ******
+*/
+#shopImageGrid {
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 3px 12px;
+    height: 250px;
+    overflow-y: auto;
+}
+
+.ci-item {
+    padding: 6px 4px;
+    cursor: grab;
+    user-select: none;
+}
+
+.ci-item:active {
+    cursor: grabbing;
+}
+
+.ci-item div {
+    margin: auto;
+}
+
+.ci-item img {
+    height: 40px;
+    margin: auto;
+}
+
+.ci-item .col-buttons {
+    display: flex;
+    justify-content: end;
+}
+
+.ci-item .del-img-btn {
+    color: var(--color-error);
+}
+
+#shopImageGrid .ci-item {
+    border-bottom: 1px solid var(--color-border);
+}
+
+#shopImageGrid .ci-item:last-child {
+    border-bottom: none;
+}
+
+/*
+    ******  IMAGE SLIDE  ******
+*/
+#imageSlide {
+    border: 2px solid var(--color-border);
+    border-radius: 4px;
+    padding: 2px;
+    width: 100%;
+}
+
+.image-row {
+    display: flex;
+    height: fit-content;
+    min-height: 250px;
+    gap: 3px;
+    margin: 0 auto;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: thin;
+}
+
+.image-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.image-row::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 4px;
+}
+
+.image-row img {
+    flex: 0 0 auto;
+    width: auto;
+    height: 240px;
+    border-radius: 3px;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.img-wh {
+    width: 60px;
+    height: 40px;
+}
+
+.branch-map-custom {
+    height: 75px;
+    min-height: unset !important;
+}
+
+.branch-address-custom {
+    height: 146px;
+    min-height: unset !important;
+}
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1600px) {
+
+    /*
+        ******  IMAGE HEIGHT  ******
+    */
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 160px;
+    }
+
+    #introduce_image_val {
+        height: 230px;
+    }
+
+    #shop_introduction_image_val {
+        height: 240px;
+    }
+
+    #characteristic_image_val {
+        height: 230px;
+    }
+
+
+    /*
+        ******  TEXT AREA HEIGHT  ******
+    */
+    #introduction_content_val {
+        min-height: 100px;
+    }
+
+
+    #shop_introduction_title_val {
+        min-height: 75px;
+    }
+
+    #shop_introduction_content_val {
+        min-height: 140px;
+    }
+
+    #slideshows_title_val {
+        min-height: 35px;
+    }
+
+    #slideshows_content_val {
+        min-height: 70px;
+    }
+
+    /*
+        ******  EXPANDED ITEM  ******
+    */
+    .expandable-div {
+        margin-bottom: 13px;
+    }
+
+    .header {
+        padding: 8.2px 10px;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 250px;
+    }
+
+    #shop_introduction_image_val {
+        height: 250px;
+    }
+
+    #introduce_image_val {
+        height: 250px;
+    }
+
+    #characteristic_image_val {
+        height: 220px;
+    }
+
+    .branch-widget {
+        min-height: 507px;
+    }
+
+    .tab-container {
+        min-height: unset;
+        height: 240px;
+    }
+
+    #imageGrid {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 190px;
+    }
+
+    #shop_introduction_content_val {
+        height: 140px;
+    }
+
+    .image-row {
+        min-height: 220px;
+    }
+
+    .image-row img {
+        height: 220px;
+    }
+
+    #shopImageGrid {
+        height: 230px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .card-icon {
+        width: 20%;
+        padding-top: 15px;
+    }
+
+    .card-icon i::before {
+        font-size: 23px;
+        padding: 8px;
+    }
+
+    .shop_logo {
+        width: 80%;
+        margin: auto;
+    }
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 260px;
+    }
+
+    #introduction_content_val {
+        min-height: 122px;
+    }
+
+    #characteristic_content_val {
+        min-height: 120px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .tab-container {
+        height: 310px;
+    }
+
+    .branch_add {
+        min-height: 105px !important;
+    }
+
+    #shop_introduction_content_val {
+        min-height: 100px;
+    }
+
+    .philosophy_content_val {
+        min-height: 110px !important;
+    }
+
+    .image-row {
+        min-height: 200px;
+    }
+
+    .image-row img {
+        height: 200px;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .content.expanded {
+        max-height: 280px;
+        overflow: auto;
+    }
+
+    .shop_logo,
+    .shop_introduction_image,
+    .characteristic_image {
+        width: 80%;
+        margin: auto;
+    }
+
+    .introduce_image {
+        width: 70%;
+        margin: auto;
+    }
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 230px;
+    }
+
+    #shop_introduction_image_val {
+        height: 230px;
+    }
+
+    #introduce_image_val {
+        height: 260px;
+    }
+
+    #characteristic_image_val {
+        height: 230px;
+    }
+
+    .branch-widget {
+        min-height: 507px;
+    }
+
+    .tab-container {
+        height: 285px;
+    }
+
+    .philosophy_content_val {
+        min-height: 90px !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .card-icon {
+        width: 20%;
+        padding-top: 12px;
+    }
+
+    .card-icon i::before {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .shop_logo,
+    .shop_introduction_image,
+    .characteristic_image,
+    .introduce_image {
+        width: 100%;
+    }
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 150px;
+    }
+
+    #introduce_image_val {
+        height: 250px;
+    }
+
+    #shop_introduction_image_val {
+        height: 220px;
+    }
+
+    #characteristic_image_val {
+        height: 190px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    .branch_add {
+        min-height: 115px !important;
+    }
+
+    #shop_logo_val,
+    #shop_icon_logo_val,
+    #shop_text_logo_val,
+    #shop_logo_with_text_val {
+        height: 150px;
+    }
+
+    #introduce_image_val {
+        height: 230px;
+    }
+
+    #shop_introduction_image_val,
+    #characteristic_image_val {
+        height: 180px;
+    }
+}

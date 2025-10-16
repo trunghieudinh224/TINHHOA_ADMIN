@@ -1,0 +1,77 @@
+#history-table {
+    border-collapse: collapse;
+    max-height: 390px;
+    overflow-y: auto;
+}
+
+#history-table table {
+    width: 100%;
+}
+
+#history-table .tb-item:hover {
+    background: #f5f5f5;
+}
+
+#history-table thead {
+    width: 100%;
+}
+
+#history-table th,
+#history-table td {
+    padding: 10px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-main);
+    color: var(--color-third) !important;
+    z-index: 1;
+    padding: 8px;
+    text-align: left;
+}
+
+[data-col="date"] {
+    width: 18%;
+}
+
+[data-col="time"] {
+    width: 10%;
+}
+
+[data-col="update-person"] {
+    width: 22%;
+}
+
+[data-col="description"] {
+    width: 50%;
+}
+
+.tb-item {
+    height: 40px;
+}
+
+.des-err {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 660px) {}
+
+@media screen and (max-width: 580px) {}
+
+@media screen and (max-width: 450px) {}
+
+@media screen and (max-width: 365px) {}

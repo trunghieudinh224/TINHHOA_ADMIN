@@ -1,0 +1,113 @@
+#error-table {
+    border-collapse: collapse;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+#error-table table {
+    width: 100%;
+}
+
+#error-table .tb-item:hover {
+    background: #f5f5f5;
+}
+
+#error-table thead {
+    width: 100%;
+}
+
+#error-table th,
+#error-table td {
+    padding: 10px;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: var(--color-main);
+    color: var(--color-third) !important;
+    z-index: 1;
+    padding: 8px;
+}
+
+[data-col="time"] {
+    width: 18%;
+}
+
+[data-col="error-code"] {
+    width: 25%;
+}
+
+[data-col="description"] {
+    width: 32%;
+}
+
+[data-col="status"] {
+    width: 25%;
+}
+
+.tb-item {
+    height: 40px;
+}
+
+.status-frame {
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin: auto;
+}
+
+.status-frame[status="0"] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 237 233 / var(--tw-bg-opacity, 1));
+}
+
+.status-frame[status="1"] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 243 251 / var(--tw-bg-opacity, 1));
+}
+
+.status-frame[status="2"] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(223 255 243 / var(--tw-bg-opacity, 1));
+}
+
+.status-frame[status="0"] span {
+    --tw-text-opacity: 1;
+    color: rgb(251 151 125 / var(--tw-text-opacity, 1));
+}
+
+.status-frame[status="1"] span {
+    --tw-text-opacity: 1;
+    color: rgb(0 133 219 / var(--tw-text-opacity, 1));
+}
+
+.status-frame[status="2"] span {
+    --tw-text-opacity: 1;
+    color: rgb(75 208 139 / var(--tw-text-opacity, 1));
+}
+
+.des-err {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 160px;
+}
+
+
+/*
+  ******  RESPONSIVE LAYOUT  ******
+*/
+@media screen and (max-width: 1200px) {}
+
+@media screen and (max-width: 900px) {}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 660px) {}
+
+@media screen and (max-width: 580px) {}
+
+@media screen and (max-width: 450px) {}
+
+@media screen and (max-width: 365px) {}
