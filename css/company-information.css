@@ -400,7 +400,7 @@
 #banner_header {
     width: 100%;
     aspect-ratio: 3840 / 640;
-    object-fit: cover;
+    object-fit: contain;
     display: block;
 }
 

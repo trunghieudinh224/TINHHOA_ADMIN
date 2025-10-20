@@ -1,11 +1,11 @@
 :root {
-    --gap: 10px;
-    --node-size: 71px;
-    --node-width: 130px;
-    --node-height: 90px;
+    --gap: 20px;
+    --node-size: 130px;
+    --node-width: 230px;
+    --node-height: 100px;
     --node-bg: #00403D;
     --node-color: #fff;
-    --line-color: #cfe9e6;
+    --line-color: #3ad96b;
 }
 
 .widget {
@@ -468,6 +468,19 @@
     font-size: 14px;
     position: relative;
     z-index: 2;
+}
+
+.node-edit {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+.node-edit:hover {
+    cursor: pointer;
+    scale: 0.95;
 }
 
 .r1c3 {
