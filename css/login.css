@@ -56,7 +56,7 @@ label {
 }
 
 .container-login {
-    background-image: url('../../assets/background/background.jpg');
+    /* background-image: url('../../assets/background/background.jpg'); */
     width: 100%;
     min-height: 100vh;
     display: -webkit-box;
@@ -93,7 +93,7 @@ label {
     overflow: hidden;
     padding: 55px 55px 37px 55px;
     background: var(--color-main);
-    background: -webkit-linear-gradient(top, var(--color-main), #3979c2);
+    background: -webkit-linear-gradient(top, var(--color-main), #0d634d);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -114,9 +114,7 @@ label {
 .login-form-logo img {
     height: 100%;
     width: 100%;
-    padding: 15%;
-    border-radius: 50%;
-    background-color: var(--color-third);
+    padding: 5%;
 }
 
 .login-form-title {
@@ -249,6 +247,10 @@ label {
 .input-option:checked+.label-option::before {
     color: var(--color-main);
     font-weight: var(--fw-bold);
+}
+
+#remember-ckb {
+    accent-color: #4eff9a;
 }
 
 

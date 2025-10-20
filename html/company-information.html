@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>EVS ADMIN | Thông tin công ty</title>
+    <link rel="icon" type="image/png" href="../assets/logo/evs-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootsrap version 5.2.3 -->
+    <link rel="stylesheet" href="../library/bootstrap/bootstrap.min.css">
+    <!-- FontAwesome version 6.7.2 -->
+    <link rel="stylesheet" href="../library/fontawesome-6.7.2/css/all.css">
+    <!-- Toastify css version 5.3.3 -->
+    <link rel="stylesheet" type="text/css" href="../library/toast/toastify.min.css">
+    <!-- Animate css version 4.1.1 -->
+    <link rel="stylesheet" type="text/css" href="../library/animate/animate.min.css">
+    </link>
+
+    <link rel="stylesheet" type="text/css" href="../css/common/common.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sidebar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/navbar.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/toast.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/icon-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/information.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/option_menu/change-password.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/modal-option-menu.css">
+    <link rel="stylesheet" type="text/css" href="../css/dialog/multi-image-dialog.css">
+    <link rel="stylesheet" type="text/css" href="../css/common/sortable.css">
+    <link rel="stylesheet" type="text/css" href="../css/company-information.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar-menu">
+        <div class="company-container">
+            <h3 class="company-name fw-b w-100 ta-c">EVS ADMIN</h3>
+            <div class="close-btn-sidebar">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+        <br>
+        <div class="sidebar-item" id="dashboard">
+            <i class="ic fas fa-home"></i>
+            <span class="text">Dashboard</span>
+        </div>
+        <div class="sidebar-item active" id="company-information">
+            <i class="fa-solid fa-building"></i>
+            <span class="text">Thông tin công ty</span>
+        </div>
+        <div class="sidebar-item" id="about-us">
+            <i class="fa-solid fa-address-card"></i>
+            <span class="text">Về chúng tôi</span>
+        </div>
+        <div class="sidebar-item" id="contents">
+            <i class="fa-solid fa-pen"></i>
+            <span class="text">Content</span>
+        </div>
+        <div class="sidebar-item" id="history-update">
+            <i class="fa-solid fa-repeat"></i>
+            <span class="text">Update history</span>
+        </div>
+        <div class="sidebar-item" id="error-management">
+            <i class="fa-solid fa-bug"></i>
+            <span class="text">Error history</span>
+        </div>
+        <div class="sidebar-item" id="users">
+            <i class="fa-solid fa-user-tie"></i>
+            <span class="text">User</span>
+        </div>
+        <div class="sidebar-item" id="contacts">
+            <i class="fa-solid fa-envelope"></i>
+            <span class="text">Contact</span>
+        </div>
+        <div class="sidebar-item" id="seo">
+            <i class="fa-solid fa-gear"></i>
+            <span class="text">SEO setting</span>
+        </div>
+    </div>
+
+    <section class="page">
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="user-profile">
+                <div class="toggle-btn">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div class="user-profile">
+                <span class="username user-inf-name" id="username-option">...</span>
+                <div class="avatar">
+                    <img src="../assets/icon/user.png" width="100%" id="image-option" />
+                </div>
+                <div class="dropdown">
+                    <div class="dropdown-item text" id="option_info"><i class="ic fas fa-user-circle"></i> Tài khoản</div>
+                    <div class="dropdown-item text" id="option_change_pass"><i class="ic fas fa-key"></i> Đổi mật khẩu</div>
+                    <div class="dropdown-item text" id="option_logout" message-access="Đăng xuất"><i class="ic fas fa-sign-out-alt"></i> Đăng xuất</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="main-content">
+            <!-- Image upload file -->
+            <input class="img-upload-file" type="file" id="multi-img-upload" accept="image/*" multiple>
+            <input class="img-upload-file" type="file" id="img-upload" accept="image/*">
+
+            <div>
+                <h1 id="page-title" class="up-cs fw-b">THÔNG TIN CHUNG</h1>
+
+                <!-- Language selection -->
+                <div class="language-select-frame">
+                    <button class="cm-btn" id="saveData">LƯU</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <!-- Shop information -->
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">1. Thông tin chung</h2>
+                                </div>
+
+                                <div class="form-container">
+
+                                    <div class="form-group">
+                                        <label class="text"><i class="fa-solid fa-building"></i>
+                                            Tên trang web</label>
+                                        <input class="text" type="text" id="web_name">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="text"><i class="fa-solid fa-location-dot"></i>
+                                            Địa chỉ</label>
+                                        <input class="text" type="text" id="address">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="text"><i class="fa-solid fa-phone"></i>
+                                            Số điện thoại</label>
+                                        <input class="text" type="tel" id="phone">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="text"><i class="fa-solid fa-envelope"></i>
+                                            Email</label>
+                                        <input class="text" type="email" id="mail">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="text"><i class="fa-solid fa-registered"></i>
+                                            Coppy right</label>
+                                        <input class="text" type="text" id="copyright">
+                                    </div>
+
+                                    <div class="title-widget-frame">
+                                        <h2 class="fw-b">2. Mạng xã hội</h2>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-brands fa-facebook"></i>
+                                                    Facebook</label>
+                                                <input class="text" type="text" id="facebook">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-brands fa-instagram"></i>
+                                                    Instagram</label>
+                                                <input class="text" type="text" id="instagram">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-brands fa-linkedin-in"></i>
+                                                    Linkedin</label>
+                                                <input class="text" type="text" id="linkedin">
+                                            </div>
+                                        </div>
+
+                                        <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-brands fa-behance"></i>
+                                                    Behance</label>
+                                                <input class="text" type="text" id="behance">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-6">
+                            <div class="widget">
+                                <div class="title-widget-frame">
+                                    <h2 class="fw-b">3. Menu</h2>
+                                </div>
+
+                                <div class="form-container">
+                                    <div class="row">
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+
+                                            <div class="form-group">
+                                                <div class="item-frame">
+                                                    <label class="text" id="image_slideshow_list"><i
+                                                            class="fa-solid fa-list"></i>Các mục của menu</label>
+
+                                                    <div class="col-right">
+                                                        <a class="text underline" id="btn_reset_slideshow">
+                                                            <i class="fas fa-undo"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="grid-container" id="menuGrid">
+                                                    <div class="text status-grid"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-solid fa-code"></i>
+                                                    Menu id</label>
+                                                <input class="text" type="text" id="menu_header_id" readonly>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-solid fa-bars"></i>
+                                                    Menu</label>
+                                                <input class="text" type="text" id="menu_header_text">
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="text"><i class="fa-solid fa-up-down-left-right"></i>
+                                                    Vị trí</label>
+                                                <input class="text" type="tel" id="menu_header_position" readonly>
+                                            </div>
+
+                                            <div class="btn-box">
+                                                <button class="cm-btn cancel-btn" id="menu_grid_cancel_btn">Bỏ
+                                                    chọn</button>
+                                                <button class="cm-btn" id="menu_grid_update_btn">Cập nhật</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget">
+                <div class="title-widget-frame">
+                    <h2 class="fw-b">4. Hình ảnh</h2>
+                </div>
+
+                <div class="form-container">
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                            <div class="form-group">
+                                <label class="text"><i class="fa-solid fa-image"></i>
+                                    Banner header</label>
+                                <div class="img_frame">
+                                    <img class="change-img banner_header" src="../assets/icon/image_default.png"
+                                        id="banner_header" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                            <div class="form-group">
+                                <label class="text"><i class="fa-solid fa-image"></i>
+                                    Banner footer</label>
+                                <div class="img_frame banner_footer">
+                                    <img class="change-img banner_footer" src="../assets/icon/image_default.png"
+                                        id="banner_footer" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                            <div class="form-group">
+                                <label class="text"><i class="fa-solid fa-image"></i>
+                                    Logo menu</label>
+                                <div class="img_frame logo_menu_1">
+                                    <img class="change-img logo_menu_1" src="../assets/icon/image_default.png"
+                                        id="logo_menu_1" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                            <div class="form-group">
+                                <label class="text"><i class="fa-solid fa-image"></i>
+                                    Logo menu khi cuộn</label>
+                                <div class="img_frame logo_menu_2">
+                                    <img class="change-img logo_menu_2" src="../assets/icon/image_default.png"
+                                        id="logo_menu_2" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 col-xxl-3">
+                            <div class="form-group">
+                                <label class="text"><i class="fa-solid fa-image"></i>
+                                    Logo footer</label>
+                                <div class="img_frame logo_footer">
+                                    <img class="change-img logo_footer" src="../assets/icon/image_default.png"
+                                        id="logo_footer" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="pageOverlay"></div>
+    </section>
+
+    <div class="dialog-overlay" id="dialogOverlay">
+        <!-- Info Dialog -->
+        <div class="dialog" id="infoDialog">
+            <button class="close-btn" id="closeInfoDialog">×</button>
+            <div class="container-custom-modal">
+                <h3>Account</h3>
+                <div class="image-container">
+                    <img id="imgInfo" loading="lazy" src="" width="100%" alt="">
+                    <input type="file" class="d-none" id="fileImageOption">
+                </div>
+                <div class="form-container">
+                    <input class="form-control" type="text" placeholder="Name" id="nameInfo">
+                    <input class="form-control" type="text" placeholder="Phone" id="phoneInfo">
+                    <input class="form-control" type="text" placeholder="Email" id="emailInfo">
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Change Password Dialog -->
+        <div class="dialog" id="changeDialog">
+            <button class="close-btn" id="closeChangeDialog">x</button>
+            <div class="container-custom-modal">
+                <h3>Change password</h3>
+                <div class="form-container">
+                    <input class="form-control" type="password" placeholder="Recent password" id="old_pass">
+                    <input class="form-control" type="password" placeholder="New password" id="new_pass">
+                    <input class="form-control" type="password" placeholder="Re-enter new password" id="new_pass_re">
+                    <div class="button-group">
+                        <button class="cm-btn cancel-btn cancel-custom" type="button">Cancel</button>
+                        <button class="cm-btn save-custom" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Alert dialog -->
+    <div id="alert-dialog">
+        <div id="overlay-alert-dialog">
+            <div id="frame-alert-dialog">
+                <i class="fas fa-times al-btn" id="close-alert-dialog"></i>
+                <div id="icon-alert-dialog-area">
+                    <img src="../assets/icon/error-mess-md.png" id="icon-alert-dialog" />
+                </div>
+
+                <div id="alert-content">
+                    <div class="title-alert-dialog ta-c fw-b w100 up-cs" id="alert-title">INFORMATION</div>
+                    <div id="alert-mess" class="text ta-c w-100">Đang tải dữ liệu...</div>
+
+                    <div id="alert-button-area">
+                        <button class="cm-btn al-btn negative-btn" id="neg-btn">Không</button>
+                        <button class="cm-btn al-btn positive-btn" id="pos-btn">Có</button>
+                        <button class="cm-btn al-btn negative-btn" id="con-btn">Xác nhận</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootsrap version 5.2.3 -->
+    <script type="text/javascript" src="../library/bootstrap/bootstrap.bundle.min.js"></script>
+    <!-- jQuery version 3.7.1 -->
+    <script type="text/javascript" src="../library/jquery/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script>
+    <!-- FontAwesome version 6.7.2 -->
+    <script type="text/javascript" src="../library/fontawesome-6.7.2/js/fontawesome.min.js"></script>
+    <!-- Sortable version 1.15.2 -->
+    <script type="text/javascript" src="../library/sortable/sortable.js"></script>
+    <!-- Toastify version 5.37.0 -->
+    <script type="text/javascript" src="../library/toast/toastify-js.js"></script>
+    <!-- Select2 version 4.0.3 -->
+    <script type="text/javascript" src="../library/select2/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <!-- Axios version 1.8.4 -->
+    <script type="text/javascript" src="../library/axios/axios.min.js"></script>
+    <!-- Site Bar -->
+    <script type="text/javascript" src="../js/common/site-bar.js"></script>
+    <!-- Option JS -->
+    <script type="module" src="../js/common/option.js"></script>
+
+    <script type="module" src="../js/company-information.js"></script>
+</body>
+
+</html>

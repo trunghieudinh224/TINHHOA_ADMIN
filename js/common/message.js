@@ -7,7 +7,7 @@
 // Message data
 const messData = {
     // INFO MESSAGE
-    "I00001": "Loading data...",
+    "I00001": "Đang tải dữ liệu...",
     "I00002": "Data has been saved successfully.",
     "I00003": "Data has been deleted successfully.",
     "I00004": "Changes have been undone.",

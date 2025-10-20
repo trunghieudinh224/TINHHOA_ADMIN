@@ -7,6 +7,7 @@ import * as SS from '../common/session.js';
 import * as Dialog from '../dialog/dialog.js';
 import * as Pr from '../data/param.js';
 import * as Mess from '../common/message.js';
+import * as FM from '../common/format.js';
 /**
     * MOVE PAGE
     * 
@@ -76,4 +77,31 @@ export function checkDifferencesInArray(arr1, arr2) {
     }
 
     return true;
+}
+
+
+/**
+    * GET VALUE BY KEY
+    * 
+    * @param data: data
+    * @param key: key value
+*/
+export function getDataByKeyValue(data, key) {
+    let value = null;
+    if (data != null && data.length > 0) {
+        value = data.find(obj => obj.key.includes(key)).value;
+    }
+    return FM.nullToString(value);
+}
+
+
+/**
+    * CHECK VALUE WITH CONDITION (STRING)
+    * 
+    * @param object_value: value
+    * @param condition: condition
+*/
+export function testCondition(object_value, condition) {
+  const fn = new Function("object_value", `return ${condition};`);
+  return fn(object_value);
 }
